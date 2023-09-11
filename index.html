@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator Plane Figure</title>
     <link rel="shortcut icon" href="img/circle.png" type="image/x-icon">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +61,157 @@
         <p>Silahkan manfaatkan kalkualtor kami untuk memudahkan hidup anda.</p>
 
         <div class="row">
+            <main>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Hitung Luas Segitiga
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="container">
+                                    <div class="luasSegitiga">
+                                        <div class="image-container">
+                                            <img src="assets/Rumus-segitiga.png" />
+                                        </div>
+                                        <p>Rumus Luas Segitiga yaitu : </p>
+                                        <div class="math-formula">
+                                            <span class="formula">$L = 1/2*alas*ti$nggi </span>
+                                        </div>
+                                        <section class="input-section">
+                                            <label for="tinggi-input">Tinggi Segitiga</label>
+                                            <input type="number" class="tinggi-input" class="positive-number"
+                                                placeholder="0" min="0" id="tinggiLuas">
+                                            <label for="alas-input">Alas Segitiga</label>
+                                            <input type="number" class="alas-input" class="positive-number"
+                                                placeholder="0" min="0" id="alasLuas">
+                                            <section>
+                                                <button class="button-calculate" id="hitungLuas">Calculate</button> <br>
+                                                <div class="math-formula">
+                                                    <!-- <span id="hasilLuas" class="formula"></span> -->
+                                                    <div id="hasilLuas" class="formula">
+                                                        <div class="formula-line">
+                                                            <span class="formula">$L$ =</span>
+                                                            <span class="formula-expression formula">$1/2 .$</span>
+                                                            <span class="formula-value fromula">$$</span>
+                                                            <span class="formula-expression formula">$.$</span>
+                                                            <span class="formula-value">$$</span>
+
+                                                        </div>
+                                                        <div class="formula-line">
+                                                            <span class="formula-result formula">$L =$</span>
+                                                            <span class="formula-value formula">$$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="button-calculate" id="resetLuas">Reset</button><br>
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Hitung Keliling Segitiga
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="container">
+                                    <div class="luasSegitiga">
+                                        <div class="image-container">
+                                            <img src="assets/Rumus-segitiga.png" />
+                                        </div>
+                                        <p>Rumus Keliling Segitiga yaitu : </p>
+                                        <div class="math-formula">
+                                            <span class="formula">$K = S1+S2+S3$</span><br>
+                                            <span class="formula">atau</span><br>
+                                            <span class="formula">$K = a+b+c$</span>
+                                        </div>
+                                        <section class="input-section">
+                                            <label for="s1">Sisi a</label>
+                                            <input type="number" class="tinggi-input" class="positive-number"
+                                                placeholder="0" min="0" id="s1">
+                                            <label for="s2">Sisi b</label>
+                                            <input type="number" class="alas-input" class="positive-number"
+                                                placeholder="0" min="0" id="s2">
+                                            <label for="s3">Sisi c</label>
+                                            <input type="number" class="alas-input" class="positive-number"
+                                                placeholder="0" min="0" id="s3">
+                                            <section>
+                                                <button class="button-calculate" id="hitungKeliling">Calculate</button>
+                                                <br>
+                                                <div class="math-formula">
+                                                    <!-- <span id="hasilLuas" class="formula"></span> -->
+                                                    <div id="hasilKeliling" class="formula">
+                                                        <div class="formula-line">
+                                                            <span class="formula">$K$ =</span>
+                                                            <span class="formula-value-keliling fromula">$$</span>
+                                                            <span class="formula-expression-keliling formula">$+$</span>
+                                                            <span class="formula-value-keliling">$$</span>
+                                                            <span class="formula-expression-keliling formula">$+$</span>
+                                                            <span class="formula-value-keliling">$$</span>
+                                                        </div>
+                                                        <div class="formula-line">
+                                                            <span class="formula-result-keliling formula">$K =$</span>
+                                                            <span class="formula-value-keliling formula">$$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="button-calculate" id="resetKeliling">Reset</button><br>
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Hitung Luas Lingkaran
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="container">
+                                    <div class="luasSegitiga">
+                                        <div class="image-container">
+                                            <img src="assets/Rumus-segitiga.png" />
+                                        </div>
+                                        <section class="input-section">
+                                            <label for="tinggi-input">Tinggi Segitiga</label>
+                                            <input type="number" id="tinggi-input" class="positive-number"
+                                                placeholder="0" min="0">
+                                            <label for="alas-input">Alas Segitiga</label>
+                                            <input type="number" id="alas-input" class="positive-number" placeholder="0"
+                                                min="0">
+                                            <section>
+                                                <button class="button-calculate">Calculate</button> <br>
+                                                <button class="button-calculate">Reset</button><br>
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+
+
+            <!-- 
             <div class="menu-card">
                 <img src="img/1.jpg" alt="school1" class="menu-card-img">
 
@@ -106,7 +261,7 @@
 
                 <h3 class="menu-card-tittle">--School Season</h3>
                 <p class="menu-card-price">Life Ballance</p>
-            </div>
+            </div> -->
 
         </div>
     </section>
@@ -161,7 +316,8 @@
     <!-- Contact Section Start-->
     <section id="contact" class="contact">
         <h2><span>Kontak </span>Kami</h2>
-        <p>Hai, mari berikan feedback anda selama menggunakan website kami, Feedback dari anda sangat berperan bagi kemajuan kami!</p>
+        <p>Hai, mari berikan feedback anda selama menggunakan website kami, Feedback dari anda sangat berperan bagi
+            kemajuan kami!</p>
 
         <div class="row">
             <iframe
@@ -255,9 +411,27 @@
     </script>
 
     <!-- My Script -->
-    <script src="js/script.js">
-
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script>
+        MathJax = {
+            loader: { load: ['input/asciimath', 'output/chtml', 'ui/menu'] },
+            asciimath: {
+                delimiters: [['$', '$'], ['`', '`']]
+            }
+        };
     </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
+        </script>
 </body>
 
 </html>
