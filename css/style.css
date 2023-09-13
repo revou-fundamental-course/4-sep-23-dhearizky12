@@ -253,13 +253,13 @@ ul.experience li p:before {
 /* Menu Section */
 .menu h2,
 .contact h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .menu p,
 .contact p {
     text-align: "center";
-    max-width: 30rem;
+    max-width: 50rem;
     margin: auto;
     font-weight: 100;
     line-height: 1.6;
