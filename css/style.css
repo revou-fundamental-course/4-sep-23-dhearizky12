@@ -342,11 +342,13 @@ ul.experience li p:before {
 .positive-number::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+  
 }
 /* Untuk memastikan input tetap rapi */
 .positive-number {
     -moz-appearance: textfield;
     appearance: textfield;
+    width: 200px;
   }
   .container {
     width: 100%;

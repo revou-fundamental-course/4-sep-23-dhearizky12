@@ -68,3 +68,30 @@ resetKeliling.addEventListener("click", function () {
     formulaValueElements[3].textContent = "";
 
 });
+const luasPersegi = document.getElementById("luasPersegi");
+luasPersegi.addEventListener("click", function () {
+    const sisiInput = document.getElementById("sisi-input");
+    const nilaiSisi = sisiInput.value;
+
+    const hasil = nilaiSisi*nilaiSisi;
+
+    const sisiElements = document.querySelectorAll(".sisi");
+    sisiElements[0].textContent = nilaiSisi;
+    sisiElements[1].textContent = nilaiSisi;
+    const luasElement=document.getElementById("hasil-luas-persegi");
+    luasElement.textContent = hasil;
+
+});
+const resetPersegi = document.getElementById("resetPersegi");
+resetPersegi.addEventListener("click", function () {
+   const inputSisi = document.getElementById("sisi-input");
+   inputSisi.value="";
+    const formulaValueElements = document.querySelectorAll(".sisi");
+
+    formulaValueElements[0].textContent = "";
+    formulaValueElements[1].textContent = "";
+
+    const luasElement=document.getElementById("hasil-luas-persegi");
+    luasElement.textContent = "";
+  
+});

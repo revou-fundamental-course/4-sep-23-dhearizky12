@@ -82,11 +82,11 @@
                                             <span class="formula">$L = 1/2*alas*ti$nggi </span>
                                         </div>
                                         <section class="input-section">
-                                            <label for="tinggi-input">Tinggi Segitiga</label>
-                                            <input type="number" class="tinggi-input" class="positive-number"
+                                            <label for="tinggiLuas">Tinggi Segitiga</label>
+                                            <input type="number"  class="positive-number"
                                                 placeholder="0" min="0" id="tinggiLuas">
                                             <label for="alas-input">Alas Segitiga</label>
-                                            <input type="number" class="alas-input" class="positive-number"
+                                            <input type="number"  class="positive-number"
                                                 placeholder="0" min="0" id="alasLuas">
                                             <section>
                                                 <button class="button-calculate" id="hitungLuas">Calculate</button> <br>
@@ -138,13 +138,13 @@
                                         </div>
                                         <section class="input-section">
                                             <label for="s1">Sisi a</label>
-                                            <input type="number" class="tinggi-input" class="positive-number"
+                                            <input type="number"  class="positive-number"
                                                 placeholder="0" min="0" id="s1">
                                             <label for="s2">Sisi b</label>
-                                            <input type="number" class="alas-input" class="positive-number"
+                                            <input type="number"  class="positive-number"
                                                 placeholder="0" min="0" id="s2">
                                             <label for="s3">Sisi c</label>
-                                            <input type="number" class="alas-input" class="positive-number"
+                                            <input type="number"  class="positive-number"
                                                 placeholder="0" min="0" id="s3">
                                             <section>
                                                 <button class="button-calculate" id="hitungKeliling">Calculate</button>
@@ -178,26 +178,39 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Hitung Luas Lingkaran
+                                Hitung Luas Persegi
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="container">
-                                    <div class="luasSegitiga">
+                                    <div class="luasPersegi">
                                         <div class="image-container">
                                             <img src="assets/Rumus-segitiga.png" />
                                         </div>
                                         <section class="input-section">
-                                            <label for="tinggi-input">Tinggi Segitiga</label>
-                                            <input type="number" id="tinggi-input" class="positive-number"
-                                                placeholder="0" min="0">
-                                            <label for="alas-input">Alas Segitiga</label>
-                                            <input type="number" id="alas-input" class="positive-number" placeholder="0"
-                                                min="0">
+                                            <label for="sisi-input">Sisi persegi</label>
+                                                <input type="number"  class="positive-number"
+                                                placeholder="0" min="0" id="sisi-input">
                                             <section>
-                                                <button class="button-calculate">Calculate</button> <br>
-                                                <button class="button-calculate">Reset</button><br>
+                                                <div class="math-formula">
+                                                    <!-- <span id="hasilLuas" class="formula"></span> -->
+                                                    <div id="hasilLuas" class="formula">
+                                                        <div class="formula-line">
+                                                            <span class="formula">$L$ =</span>
+                                                            <span class="sisi formula-value fromula">$$</span>
+                                                            <span class="formula-expression formula">$.$</span>
+                                                            <span class="sisi formula-value">$$</span>
+
+                                                        </div>
+                                                        <div class="formula-line">
+                                                            <span class="formula-result formula">$L =$</span>
+                                                            <span id="hasil-luas-persegi" class="formula-value formula">$$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button id="luasPersegi" class="button-calculate">Calculate</button> <br>
+                                                <button id="resetPersegi" class="button-calculate">Reset</button><br>
                                             </section>
                                         </section>
                                     </div>
